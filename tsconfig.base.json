@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bibi-ui/button": ["packages/button/src/index.ts"]
+      "@bibi-ui/button": ["packages/button/src/index.ts"],
+      "@bibi-ui/header": ["packages/header /src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
