@@ -1,20 +1,39 @@
-import React from "react";
-import Button from "../../../../packages/button/src/lib/button";
+import React from 'react';
+import { Button } from '@bibi-ui/button';
+import { Header } from '@bibi-ui/header'
 
-export const App = () => {
+const App: React.FC = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "1rem", padding: "1rem" }}>
-      <Button variant="primary" onClick={() => alert("Primary Button")}>
-        Primary
-      </Button>
-      <Button variant="secondary" size="large" fullWidth>
-        Secondary
-      </Button>
-      <Button variant="danger" disabled>
-        Disabled
-      </Button>
-    </div>
+    <>
+      {/* Header Component */}
+      <Header
+        title="Documentation App"
+        subtitle="Components Library"
+        actions={
+          <Button
+            label="Click Me"
+            onClick={() => alert('Button Clicked!')}
+            type="button"
+            size="large"
+            variant='primary'
+          />
+        }
+      />
+
+      {/* Main Content */}
+      <main style={{ padding: '2rem' }}>
+        <h2>Main Content</h2>
+        <p>This is the main content area of the app.</p>
+
+        {/* Button Component */}
+        <Button
+          label="Another Button"
+          onClick={() => console.log('Another Button Clicked')}
+          type="submit"
+        />
+      </main>
+    </>
   );
 };
 
-// export default App;
+export default App;
