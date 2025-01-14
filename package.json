@@ -2,7 +2,9 @@
   "name": "@bibi-ui/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "vite"
+  },
   "private": true,
   "dependencies": {
     "react": "18.3.1",
