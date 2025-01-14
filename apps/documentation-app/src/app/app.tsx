@@ -1,38 +1,34 @@
 import React from 'react';
 import { Button } from '@bibi-ui/button';
-import { Header } from '@bibi-ui/header'
+import { Header } from '@bibi-ui/header';
+import { Navbar } from '@bibi-ui/navbar ';
 
 const App: React.FC = () => {
   return (
     <>
-      {/* Header Component */}
       <Header
         title="Documentation App"
         subtitle="Components Library"
         actions={
+
           <Button
+            children= "Sign Up"
             label="Click Me"
-            onClick={() => alert('Button Clicked!')}
+            onClick={() => alert('Sign up with email')}
             type="button"
             size="large"
-            variant='primary'
+            variant="secondary"
           />
         }
       />
-
-      {/* Main Content */}
-      <main style={{ padding: '2rem' }}>
-        <h2>Main Content</h2>
-        <p>This is the main content area of the app.</p>
-
-        {/* Button Component */}
-        <Button
-          label="Another Button"
-          onClick={() => console.log('Another Button Clicked')}
-          type="submit"
-        />
-      </main>
-    </>
+      
+      <Navbar>
+        <a href="#home">Home</a> 
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </Navbar>
+      </>
   );
 };
 

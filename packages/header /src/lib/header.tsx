@@ -27,4 +27,3 @@ export const Header: React.FC<HeaderProps> = ({ title, subtitle, actions }) => {
   );
 };
 
-//export default Header;

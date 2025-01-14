@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import  {Button} from '@bibi-ui/button';
+import Navbar from './navbar';
 
-describe('Button', () => {
+describe('Navbar', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Button />);
+    const { baseElement } = render(<Navbar />);
     expect(baseElement).toBeTruthy();
   });
 });
