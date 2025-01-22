@@ -1,0 +1,50 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    background-color: #212529; /* Colore di sfondo scuro */
+    color: #ffffff; /* Colore del testo bianco */
+    text-align: center;
+    gap: 1rem; /* Distanza tra le sezioni */
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 1.5rem; /* Spaziatura tra i link */
+    flex-wrap: wrap;
+  }
+  
+  .footer-links a {
+    color: #f8f9fa; /* Colore chiaro per i link */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff; /* Colore azzurro al passaggio del mouse */
+  }
+  
+  .footer-social-links {
+    display: flex;
+    gap: 1rem; /* Spaziatura tra le icone */
+  }
+  
+  .footer-social-links a {
+    color: #f8f9fa; /* Colore chiaro per le icone */
+    font-size: 1.5rem; /* Dimensione delle icone */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-social-links a:hover {
+    color: #007bff; /* Colore azzurro al passaggio del mouse */
+    transform: scale(1.1); /* Ingrandisce leggermente l'icona */
+  }
+  
+  .footer-copyright {
+    font-size: 0.8rem;
+    color: #adb5bd; /* Colore testo secondario */
+  }
+  
