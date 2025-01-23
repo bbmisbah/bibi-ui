@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@bibi-ui/button": ["packages/button/src/index.ts"],
+      "@bibi-ui/card": ["packages/card/src/index.ts"],
       "@bibi-ui/footer": ["packages/footer/src/index.ts"],
       "@bibi-ui/footer ": ["@bibi-ui/footer/src/index.ts"],
       "@bibi-ui/grid": ["packages/grid/src/index.ts"],
