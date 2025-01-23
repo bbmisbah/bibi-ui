@@ -2,7 +2,9 @@ import React from 'react';
 import { Button } from '@bibi-ui/button';
 import { Header } from '@bibi-ui/header';
 import { Navbar } from '@bibi-ui/navbar ';
-import { Footer }  from '../../../../packages/footer/src/lib/footer';
+import { Footer }  from '@bibi-ui/footer';
+import { Hero } from '../../../../packages/hero/src/lib/hero';
+
 
 const App: React.FC = () => {
   return (
@@ -30,6 +32,25 @@ const App: React.FC = () => {
         <a href="#contact">Guides</a>
       </Navbar>
 
+       {/* Hero Section */}
+       <Hero
+        title="Welcome to Bibi-ui"
+        subtitle="Discover all the reusable components you will need"
+        backgroundImage="https://via.placeholder.com/1920x600" // dopo cambiare sfondo (in todo: cambiare grafica app)
+        actions={
+          <Button
+            children="Learn More"
+            label="Learn More"
+            onClick={() => alert('Discover more about the app!')}
+            type="button"
+            size="large"
+            variant="primary"
+          />
+        }
+        textAlignment="center"
+        overlayColor="rgba(0, 0, 0, 0.3)"
+      />
+
       <Footer
         links={[
           { label: "Home", href: "/" },
@@ -46,6 +67,8 @@ const App: React.FC = () => {
         backgroundColor="#212529"
         textColor="#fff"
       />
+
+      
       </>
 
       
