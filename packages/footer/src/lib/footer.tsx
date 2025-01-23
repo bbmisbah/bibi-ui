@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({
         padding: "2rem",
         textAlign: "center",
         borderTop: "1px solid #ddd",
-        marginTop:"26rem"
+        marginTop:"0rem"
       }}
     >
       {/* Link principali */}
