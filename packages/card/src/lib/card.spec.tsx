@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import {Grid} from './grid';
+import {Card} from './card';
 
-describe('Grid', () => {
+describe('Card', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Grid />);
+    const { baseElement } = render(<Card />);
     expect(baseElement).toBeTruthy();
   });
 });

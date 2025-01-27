@@ -1,49 +1,36 @@
-import React from "react";
+import React from 'react';
+import { Card } from '@bibi-ui/card';
 
-type GridProps = {
-  children: React.ReactNode; 
-  columns?: number; 
-  gap?: string; 
-  rowGap?: string; 
-  columnGap?: string; 
-  justifyItems?: "start" | "center" | "end" | "stretch"; 
-  alignItems?: "start" | "center" | "end" | "stretch"; 
-  style?: React.CSSProperties; 
-  border?: string; // Definisce il bordo del componente
-  borderColor?: string; // Colore del bordo
-  borderRadius?: string; // Raggio di curvatura del bordo
+type ComponentProps = {
+  name: string;
+  image: string;
+  description: string;
 };
 
-export const Grid: React.FC<GridProps> = ({
-  children,
-  columns = 3, 
-  gap = "1rem", 
-  rowGap,
-  columnGap,
-  justifyItems = "stretch", 
-  alignItems = "stretch",
-  style,
-  border = 'none',
-  borderColor = '#000', // Impostazione di default colore nero
-  borderRadius = '0',
-}) => {
+type GridProps = {
+  columns: number | string;
+  gap?: string;
+  components: ComponentProps[];
+};
+
+export const Grid: React.FC<GridProps> = ({ columns, gap = '2rem', components }) => {
   return (
     <div
       style={{
-        display: "grid",
+        display: 'grid',
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        gap,
-        rowGap,
-        columnGap,
-        justifyItems,
-        alignItems,
-        border: border,
-        borderColor: borderColor,
-        borderRadius: borderRadius,
-        ...style, 
+        gap: gap,
+        padding: '2rem',
       }}
     >
-      {children}
+      {components.map((component, index) => (
+        <Card
+          key={index}
+          name={component.name}
+          image={component.image}
+          description={component.description}
+        />
+      ))}
     </div>
   );
 };
