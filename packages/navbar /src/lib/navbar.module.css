@@ -13,6 +13,7 @@
   .navbar .nav-links {
     display: flex;
     gap: 1rem;
+    margin-left: 65rem;
   }
   
   .navbar .nav-links a {
