@@ -11,6 +11,7 @@ type ButtonProps = {
   disabled?: boolean; // disabilita il pulsante
   fullWidth?: boolean; // estende pulsante su tutta la larghezza 
   label?: string; 
+  classname?:string;
 };
 
 export const Button = ({

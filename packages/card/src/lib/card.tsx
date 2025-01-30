@@ -1,4 +1,5 @@
 import React from 'react';
+//import './card.module.css'; // Importa il file CSS
 
 type CardProps = {
   name: string;
@@ -8,13 +9,14 @@ type CardProps = {
 
 export const Card: React.FC<CardProps> = ({ name, image, description }) => {
   return (
-    <div
+    <div className='card-container'
       style={{
         border: '1px solid #e2e8f0',
         borderRadius: '8px',
         padding: '1rem',
         textAlign: 'center',
         boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+        fontFamily: "'Poppins', sans-serif",
       }}
     >
       <img

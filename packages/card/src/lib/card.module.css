@@ -1,7 +1,19 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.card-container {
+    font-family: 'Poppins', sans-serif; /* Cambia il font */
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-container h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-container p {
+    font-size: 1rem;
+    color: #555;
+  }
+  

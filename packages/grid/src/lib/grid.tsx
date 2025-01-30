@@ -1,10 +1,13 @@
 import React from 'react';
 import { Card } from '@bibi-ui/card';
+import { Link } from 'react-router-dom';
 
 type ComponentProps = {
   name: string;
   image: string;
   description: string;
+  route: string; 
+  link: React.ReactNode;
 };
 
 type GridProps = {
@@ -24,12 +27,13 @@ export const Grid: React.FC<GridProps> = ({ columns, gap = '2rem', components })
       }}
     >
       {components.map((component, index) => (
-        <Card
-          key={index}
-          name={component.name}
-          image={component.image}
-          description={component.description}
-        />
+        <Link to={component.route} key={index} style={{ textDecoration: "none", color: "inherit" }}>
+          <Card
+            name={component.name}
+            image={component.image}
+            description={component.description}
+          />
+        </Link>
       ))}
     </div>
   );
