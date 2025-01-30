@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* ButtonPage.css */
+.page-container {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 30px auto;  /* Margine sopra e sotto */
+  background-color: #f9f9f9;
+  font-family: 'DM Sans', sans-serif; /* Usa il font Roboto */
+  color: #333;  /* Colore del testo */
+}
+
+h1 {
+  font-family: 'DM Sans', sans-serif;  /* Usa lo stesso font anche per i titoli */
+  font-style: roman;
+  font-weight: 700;  /* Imposta un font pesante per il titolo */
+  color: #2c3e50;  /* Colore del titolo */
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+p, ul, li {
+  font-family: 'Arial', sans-serif; /* Usa un altro font per i paragrafi e le liste */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+} 
+
+/*
+.paragraph-separator {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 1px 0;
+} */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

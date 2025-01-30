@@ -1,4 +1,7 @@
 /* navbar.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
 .navbar {
     background-color: #07444b;
     padding: 1rem;
@@ -10,15 +13,18 @@
   .navbar .nav-links {
     display: flex;
     gap: 1rem;
+    margin-left: 65rem;
   }
   
   .navbar .nav-links a {
     color: white;
     text-decoration: none;
+    font-family: 'Dm Sans', sarif;
     font-size: 1.2rem;
     padding: 0.2rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-align: right;
   }
   
   .navbar .nav-links a:hover {
