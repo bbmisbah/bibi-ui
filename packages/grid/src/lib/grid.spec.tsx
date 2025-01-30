@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import {Grid} from '@bibi-ui/grid';
+import Grid from './grid';
 
 describe('Grid', () => {
   it('should render successfully', () => {

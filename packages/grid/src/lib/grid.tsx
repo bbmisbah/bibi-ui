@@ -1,11 +1,17 @@
-import React from "react";
-import { Card, CardProps } from '@bibi-ui/card';// Import del componente Card
+import React from 'react';
+import { Card } from '@bibi-ui/card';
+import { Link } from 'react-router-dom';
 
-
+type ComponentProps = {
+  name: string;
+  image: string;
+  description: string;
+  route: string; 
+  link: React.ReactNode;
+};
 
 type GridProps = {
-  children?: React.ReactNode; 
-  cards?: CardProps[]; 
+  children: React.ReactNode; 
   columns?: number; 
   gap?: string; 
   rowGap?: string; 
@@ -20,40 +26,34 @@ type GridProps = {
 
 export const Grid: React.FC<GridProps> = ({
   children,
-  cards,
-  columns = 3,
-  gap = "1rem",
+  columns = 3, 
+  gap = "1rem", 
   rowGap,
   columnGap,
-  justifyItems = "stretch",
+  justifyItems = "stretch", 
   alignItems = "stretch",
   style,
-  border = "none",
-  borderColor = "#000",
-  borderRadius = "0",
+  border = 'none',
+  borderColor = '#000', 
+  borderRadius = '0',
 }) => {
   return (
     <div
       style={{
-        display: "grid",
+        display: 'grid',
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
         gap,
         rowGap,
         columnGap,
         justifyItems,
         alignItems,
-        border,
-        borderColor,
-        borderRadius,
-        ...style,
-        marginRight: "2rem"
+        border: border,
+        borderColor: borderColor,
+        borderRadius: borderRadius,
+        ...style, 
       }}
     >
-      {cards
-        ? cards.map((card, index) => (
-            <Card key={index} {...card} /> // Usa il componente Card
-          ))
-        : children}
+      {children}
     </div>
   );
 };
