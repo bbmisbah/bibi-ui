@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Button from './button';
+import  {Button} from '@bibi-ui/button';
 
 describe('Button', () => {
   it('should render successfully', () => {
