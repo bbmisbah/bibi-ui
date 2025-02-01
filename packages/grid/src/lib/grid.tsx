@@ -6,54 +6,35 @@ type ComponentProps = {
   name: string;
   image: string;
   description: string;
-  route: string; 
+  route: string;  // Aggiungi 'route' per il percorso
   link: React.ReactNode;
 };
 
 type GridProps = {
-  children: React.ReactNode; 
-  columns?: number; 
-  gap?: string; 
-  rowGap?: string; 
-  columnGap?: string; 
-  justifyItems?: "start" | "center" | "end" | "stretch"; 
-  alignItems?: "start" | "center" | "end" | "stretch"; 
-  style?: React.CSSProperties; 
-  border?: string; 
-  borderColor?: string; 
-  borderRadius?: string; 
+  columns: number | string;
+  gap?: string;
+  components: ComponentProps[];
 };
 
-export const Grid: React.FC<GridProps> = ({
-  children,
-  columns = 3, 
-  gap = "1rem", 
-  rowGap,
-  columnGap,
-  justifyItems = "stretch", 
-  alignItems = "stretch",
-  style,
-  border = 'none',
-  borderColor = '#000', 
-  borderRadius = '0',
-}) => {
+export const Grid: React.FC<GridProps> = ({ columns, gap = '2rem', components }) => {
   return (
     <div
       style={{
         display: 'grid',
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        gap,
-        rowGap,
-        columnGap,
-        justifyItems,
-        alignItems,
-        border: border,
-        borderColor: borderColor,
-        borderRadius: borderRadius,
-        ...style, 
+        gap: gap,
+        padding: '2rem',
       }}
     >
-      {children}
+      {components.map((component, index) => (
+        <Link to={component.route} key={index} style={{ textDecoration: "none", color: "inherit" }}>
+          <Card
+            name={component.name}
+            image={component.image}
+            description={component.description}
+          />
+        </Link>
+      ))}
     </div>
   );
 };
