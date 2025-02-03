@@ -18,7 +18,7 @@ const App: React.FC = () => {
     {
       name: "Header",
       image: "https://component.gallery/static/8da6484bc584b46766a4b7fd8fcf3b1c/Header%20Icon..svg",
-      description: "Header i an element that appears across the top of all pages on a website or application.",
+      description: "Header is an element that appears across the top of all pages on a website or application.",
       route: "/header",
     },
     {
@@ -42,7 +42,7 @@ const App: React.FC = () => {
     {
       name: "Grid",
       image: "https://component.gallery/static/252d744b1c127db6f89bba94c55f600c/Table%20Icon..svg",
-      description: "Grid is a layout for managing grid layouts",
+      description: "Grid is a layout for managing grid layouts.",
       route: "/grid",
     },
   ];
