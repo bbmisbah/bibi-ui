@@ -12,7 +12,7 @@ const App: React.FC = () => {
     {
       name: "Button",
       image: "https://component.gallery/static/6c328145b09763aaf5debda0c2dbf266/Button%20Icon..svg",
-      description: "Component used to trigger an action or event",
+      description: "A component used to trigger an action or event",
       route: "/button",
     },
     {
