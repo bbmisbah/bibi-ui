@@ -104,7 +104,8 @@ jobs:
         run: pnpm --version
 
       - name: Authenticate to npm
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > -/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
 
       - name: Run publish
         run: pnpm exec nx affected --target=nx-release-publish --access=public
