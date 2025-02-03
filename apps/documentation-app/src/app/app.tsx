@@ -18,7 +18,7 @@ const App: React.FC = () => {
     {
       name: "Header",
       image: "https://component.gallery/static/8da6484bc584b46766a4b7fd8fcf3b1c/Header%20Icon..svg",
-      description: "An element that appears across the top of all pages on a website or application.",
+      description: "Header i an element that appears across the top of all pages on a website or application.",
       route: "/header",
     },
     {
