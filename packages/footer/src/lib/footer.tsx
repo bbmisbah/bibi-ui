@@ -11,6 +11,7 @@ type FooterProps = {
   copyright?: string; // Testo di copyright
   backgroundColor?: string; // Colore di sfondo del footer
   textColor?: string; // Colore del testo
+  className?: string;
 };
 
 export const Footer: React.FC<FooterProps> = ({
@@ -21,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({
   textColor = "#212529",
 }) => {
   return (
-    <footer
+    <footer className='footer'
       style={{
         backgroundColor: backgroundColor,
         color: textColor,

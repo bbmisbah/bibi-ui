@@ -9,6 +9,8 @@ import { NavbarPage } from '../../routes/Navbar/NavbarPage';
 import { FooterPage } from '../../routes/Footer/FooterPage';
 import { HeroPage } from '../../routes/Hero/HeroPage';
 import { GridPage } from '../../routes/Grid/GridPage'
+import { ComponentsPage } from '../../routes/ComponentsPage';
+import { InstallationPage } from '../../routes/Installation/InstallationPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
@@ -21,6 +23,8 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
         <Route path="/footer" element={<FooterPage />} />
         <Route path="/hero" element={<HeroPage />} />
         <Route path="/grid" element={<GridPage />} />
+        <Route path="/components" element={<ComponentsPage />} />
+        <Route path="/installation" element={<InstallationPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
