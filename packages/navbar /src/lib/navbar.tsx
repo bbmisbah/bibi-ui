@@ -3,6 +3,7 @@ import styles from './navbar.module.css'; // Importa il file CSS
 
 export type NavbarProps = {
   children: React.ReactNode;
+  className?: string;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ children }) => {
