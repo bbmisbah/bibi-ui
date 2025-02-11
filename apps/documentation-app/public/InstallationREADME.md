@@ -105,13 +105,3 @@ export default Demo;
 
 Check out the full documentation for a list of all components and how to use them.
 
-## Contribute
-
-Whether you're a beginner or an advanced user of Bibi-UI, contributing is the best way to connect with other developers building amazing products with this library. Visit our [contribution page](#) to learn more.
-
-## Documentation
-
-Visit our [full documentation](#) for more detailed examples, usage guides, and tutorials on how to customize and extend the components.
-```
-
-This version retains the same structure as the original Italian one, translated into English.

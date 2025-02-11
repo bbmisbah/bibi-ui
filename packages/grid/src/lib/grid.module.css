@@ -1,7 +1,15 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Consente alle card di essere responsive */
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola colonna su schermi piccoli */
+    padding: 1rem;
+  }
+}
