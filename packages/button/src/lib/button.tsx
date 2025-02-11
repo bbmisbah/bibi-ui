@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./button.module.css"; // File CSS per gli stili
+import styles from './button.module.css'; // File CSS per gli stili
 
 type ButtonProps = {
   children?: React.ReactNode; // contenuto del pulsante , (es: testo o icona)
