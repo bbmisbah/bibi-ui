@@ -13,6 +13,7 @@ type ComponentProps = {
 type GridProps = {
   components: ComponentProps[];
   gap?: string;
+  columns?: number;
 };
 
 export const Grid: React.FC<GridProps> = ({ gap = '2rem', components }) => {
