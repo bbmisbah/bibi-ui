@@ -11,5 +11,7 @@
   .grid-container {
     grid-template-columns: 1fr; /* Una sola colonna su schermi piccoli */
     padding: 1rem;
+    justify-items: center;
+    align-items: center;
   }
 }

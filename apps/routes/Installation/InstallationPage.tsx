@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import './Installation.css'
 import { Navbar } from "@bibi-ui/navbar ";
 import { Link } from "react-router-dom";
+import { Footer } from "@bibi-ui/footer";
 //import readmeContent from "../../documentation-app/public/ButtonREADME.md"
 
 export const InstallationPage: React.FC = () => {
@@ -28,24 +29,36 @@ export const InstallationPage: React.FC = () => {
   }, []);
 
   return (
-<>
-    <Navbar
-    className="navbar">
-    <Link to="/">Home</Link>
-    <Link to="/installation">Installation</Link>
-    <Link to="/components">Components</Link>  {/* Aggiunto il link alla nuova pagina */}
-  </Navbar>
+    <>
+      <Navbar
+        className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/installation">Installation</Link>
+        <Link to="/components">Components</Link>  {/* Aggiunto il link alla nuova pagina */}
+      </Navbar>
 
-    <div className="page-container">
+      <div className="page-container">
 
-     
 
-      <ReactMarkdown
-        className="paragraph-separator"
-        children={markdownContent}
-        remarkPlugins={[remarkGfm]} // Abilita il supporto per le tabelle
+
+        <ReactMarkdown
+          className="paragraph-separator"
+          children={markdownContent}
+          remarkPlugins={[remarkGfm]} // Abilita il supporto per le tabelle
+        />
+      </div>
+
+      <Footer
+        className="footer"
+        links={[
+          { label: "Home", href: "/" },
+          { label: "About Us", href: "/about" },
+          { label: "Contact", href: "/contact" },
+        ]}
+        copyright="© 2025 Bibi-ui. All rights reserved."
+        backgroundColor="#07444b"
+        textColor="#fff"
       />
-    </div>
     </>
   );
 };
