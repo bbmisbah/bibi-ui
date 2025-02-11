@@ -1,6 +1,13 @@
 /* App.css */
 
 /* Stili di base per la navbar, hero, footer, ecc. */
+/* Aggiungi queste righe per evitare lo scroll orizzontale */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Impedisce lo scroll orizzontale */
+}
 
 /* Navbar */
 .navbar {

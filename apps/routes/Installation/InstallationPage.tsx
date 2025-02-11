@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm"; 
-import './Installation.css' 
+import remarkGfm from "remark-gfm";
+import './Installation.css'
+import { Navbar } from "@bibi-ui/navbar ";
+import { Link } from "react-router-dom";
 //import readmeContent from "../../documentation-app/public/ButtonREADME.md"
 
 export const InstallationPage: React.FC = () => {
@@ -26,14 +28,25 @@ export const InstallationPage: React.FC = () => {
   }, []);
 
   return (
+<>
+    <Navbar
+    className="navbar">
+    <Link to="/">Home</Link>
+    <Link to="/installation">Installation</Link>
+    <Link to="/components">Components</Link>  {/* Aggiunto il link alla nuova pagina */}
+  </Navbar>
+
     <div className="page-container">
-      
+
+     
+
       <ReactMarkdown
         className="paragraph-separator"
         children={markdownContent}
         remarkPlugins={[remarkGfm]} // Abilita il supporto per le tabelle
       />
     </div>
+    </>
   );
 };
 

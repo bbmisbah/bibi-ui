@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import './ButtonPage.css'; 
 import remarkGfm from "remark-gfm"; 
+import { Navbar } from "@bibi-ui/navbar ";
+import { Link } from "react-router-dom";
 //import readmeContent from "../../documentation-app/public/ButtonREADME.md"
 
 export const ButtonPage: React.FC = () => {
@@ -26,6 +28,12 @@ export const ButtonPage: React.FC = () => {
   }, []);
 
   return (
+    <>
+    <Navbar className="navbar">
+        <Link to="/">Home</Link>
+        <Link to="/installation">Installation</Link>
+        <Link to="/components">Components</Link>
+      </Navbar>
     <div className="page-container">
       
       <ReactMarkdown
@@ -34,6 +42,7 @@ export const ButtonPage: React.FC = () => {
         remarkPlugins={[remarkGfm]} // Abilita il supporto per le tabelle
       />
     </div>
+    </>
   );
 };
 

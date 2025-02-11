@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="*" element={<App />} />
         <Route path="/button" element={<ButtonPage />} />
         <Route path="/header" element={<HeaderPage />} />
         <Route path="/navbar" element={<NavbarPage />} />
